@@ -99,7 +99,7 @@ const Encrpytion = () => {
         }
           </div>
           <div className="inputs">
-            <p>Select the Image to be Embedded with</p>
+            <p>Select the Image to be Embedded with:</p>
           <input
         type="file"
         accept="image/*"
@@ -108,19 +108,22 @@ const Encrpytion = () => {
       <p>Enter the text to be encrpyted</p>
       <textarea  rows={5} value={text} onChange={handleTextChange} />
       <button onClick={handleEncrypt} disabled={isButtonDisabled}>Encrpyt</button>
-          </div>
-        
+          </div>  
         </div>
       </div>
+
+
       <div className="right-container">
-        <div className="image-container">
+        <div className="enc-image-container">
         {encryptedImage && (
           <div className="image-preview">
             <img src={encryptedImage} alt="encrypted" />
           </div>
         )}
         </div>
+        <div className="btn">
         <button onClick={handleDownload} disabled={isDownloadButtonDisabled}>Downlaod</button>
+        </div>
       </div>
     </div>
   )

@@ -1,5 +1,4 @@
 import './App.css';
-import MyComponent from './steganography';
 import NavBar from "./NavBar";
 import Home from "./home";
 import Encrpytion from "./Encrpytion";
@@ -10,12 +9,14 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
+import Footer from './Footer';
 
 
 const Layout = ({ children }) => (
   <div className="main-contain">
     <NavBar />
     <div className="main-content">{children}</div>
+    <Footer />
   </div>
 )
 

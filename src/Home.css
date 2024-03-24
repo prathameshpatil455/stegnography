@@ -1,0 +1,23 @@
+
+.wrapper {
+    background-image: url("./assets/kali.jpg");
+    display: flex;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    gap: 15px;
+    min-height: 90vh;
+    padding:20px 40px;
+    color: white;
+}
+
+.wrapper p{
+    font-size: 18px;
+}
+
+.wrapper li{
+    font-size: 18px;
+}
+
+

@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import "./Decryption.css"; // Assuming the CSS file name
+import "./Decrpytion.css"; 
 
 const Decryption = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -74,27 +74,38 @@ const Decryption = () => {
 
 
   return (
+    <>
     <div className="main-container">
       <div className="left-container">
-        <input
-          type="file"
-          accept="image/*"
-          onChange={handleImageChange}
-        />
-        {/* Display the uploaded image */}
-        {selectedImage && (
-          <div className="image-preview">
-            <img src={selectedImage} alt="selected" />
+        <div className="input-container">
+          <div className="image-container">
+          {
+          selectedImage && (
+            <div className="image-preview"> 
+              <img src={selectedImage} alt="selected" />
+            </div>
+          )
+        }
           </div>
-        )}
-        {/* Decrypt button */}
-        <button onClick={handleDecrypt} disabled={!selectedImage}>Decrypt</button>
+          <div className="inputs">
+            <p>Select the Image from which the data to be extracted:</p>
+          <input
+        type="file"
+        accept="image/*"
+        onChange={handleImageChange}
+      />
+      <button onClick={handleDecrypt} disabled={!selectedImage}>Decrypt</button>
+          </div>  
+        </div>
       </div>
-      <div className="right-container">
+
+
+      <div className="output-message">
         <p>The Secret Message:</p>
         <p>{decryptedText}</p>
       </div>
     </div>
+    </>
   );
 };
 

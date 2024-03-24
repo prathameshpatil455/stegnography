@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 40px;
+    background-color: black;
+    color: white;
+}
+
+.container p {
+    padding-left: 25px;
+}
