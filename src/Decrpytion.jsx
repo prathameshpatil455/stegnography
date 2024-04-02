@@ -36,41 +36,29 @@ const Decryption = () => {
       const data = imageData.data;
 
       let binaryText = "";
-      let terminationReached = false;
-      let consecutiveNulls = 0;
+      let byte = "";
 
       for (let i = 0; i < data.length; i += 4) {
-        let byte = "";
         for (let j = 0; j < 3; j++) {
-          byte += (data[i + j] & 1);
-        }
+          byte += (data[i + j] & 1); // Extract LSB of each color channel
 
-        if (byte === "00000000") {
-          consecutiveNulls++;
-          if (consecutiveNulls >= 8) {
-            terminationReached = true;
-            break;
+          if (byte.length === 8) { // Convert 8 bits to a character
+            if (byte === '00000000') { // Stop if null terminator is encountered
+              setDecryptedText(binaryText);
+              return;
+            }
+            binaryText += String.fromCharCode(parseInt(byte, 2));
+            byte = "";
           }
-        } else {
-          consecutiveNulls = 0;
         }
-
-        binaryText += byte;
       }
-      // Convert binary text to characters
-      let decryptedMessage = "";
-      for (let i = 0; i < binaryText.length; i += 8) {
-        let byte = binaryText.substr(i, 8);
-        let charCode = parseInt(byte, 2);
-        decryptedMessage += String.fromCharCode(charCode);
-      }
-
+  
+      console.log("working");
       // Update the decrypted text state
-      setDecryptedText(decryptedMessage);
+      setDecryptedText(binaryText);
     };
     img.src = selectedImage;
-};
-
+  };
 
 
   return (

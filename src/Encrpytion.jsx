@@ -36,7 +36,8 @@ const Encrpytion = () => {
     const textBinary = text
       .split('')
       .map(char => char.charCodeAt(0).toString(2).padStart(8, '0'))
-      .join('');
+      .join('') + '00000000';
+
 
     // Embed the binary text into the image using LSB steganography
     const img = new Image();
@@ -72,6 +73,7 @@ const Encrpytion = () => {
     };
     img.src = selectedImage;
   };
+
 
 
   const handleDownload = () => {
