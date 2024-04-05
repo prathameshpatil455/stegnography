@@ -7,17 +7,22 @@
     justify-content: left;
     align-items: left;
     gap: 15px;
-    min-height: 90vh;
+    height: 88vh;
     padding:20px 40px;
     color: white;
+    object-fit: contain;
 }
 
 .wrapper p{
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .wrapper li{
     font-size: 18px;
+}
+
+.wrapper *{
+    padding: 4px;
 }
 
 

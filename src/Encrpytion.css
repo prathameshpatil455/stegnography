@@ -3,12 +3,13 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(19, 13, 13, 0.5);
+    height: 88vh;
 }
 
 .left-container {
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 50vw;
     height: 88vh;
 }
@@ -17,35 +18,36 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 350px;
+    height: 320px;
     background-color: rgba(0, 0, 0, 0.575);
 }
 
 .image-preview img {
     max-width: 500px;
+    max-height: 300px;
     height: auto;
 }
 
 .input-container {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
     border: 1px solid black;
 }
 
 .inputs {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 2px;
 }
 
 .inputs input{
-    font-size: 14px;
-    padding: 8px 20px;
+    font-size: 12px;
+    padding: 4px 10px;
 }
 
 .inputs p{
-    padding: 0 20px;
+    padding: 0 10px;
     font-size: 18px;
 }
 

@@ -2,9 +2,9 @@
     display: flex;
     align-items: center;
     position: absolute;
-    bottom: 0;
+    /* bottom: 0; */
     width: 100%;
-    min-height: 40px;
+    height: 5vh;
     background-color: black;
     color: white;
 }

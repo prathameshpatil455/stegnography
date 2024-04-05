@@ -1,3 +1,4 @@
+/* eslint-disable react/no-children-prop */
 import './App.css';
 import NavBar from "./NavBar";
 import Home from "./home";
@@ -12,6 +13,7 @@ import {
 import Footer from './Footer';
 
 
+// eslint-disable-next-line react/prop-types
 const Layout = ({ children }) => (
   <div className="main-contain">
     <NavBar />
